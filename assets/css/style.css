@@ -1,0 +1,16 @@
+.header {
+    background-image: linear-gradient(to right, blue, darkblue, black);
+    color: white;
+}
+
+#search.form-control {
+    margin-top: 5px;
+}
+
+#submit {
+    margin: 1rem;
+}
+
+#history{
+    margin: 1rem;
+}

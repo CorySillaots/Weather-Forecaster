@@ -11,7 +11,7 @@
 <body>
 <!--HEADER-->
 <section class="header">
-    <div class="row h2. text-center bg-primary bg-gradient" id ="banner">
+    <div class="row h2. text-center" id ="banner">
         <h1>Weather Dashboard</h1>
     </div>
 </section>
@@ -19,32 +19,31 @@
 <section class="main">
  <div class="row">
     <!--CITY SEARCH-->
-    <div class="col-4 h3 search">
-        Search for A City:
+    <div class="col-4 h3 search text-center">
+         <div class="row searchHeader">
+            <div class="col-12">
+            <label for="search">Search for A City:</label>
+            </div>
+            <div class="col-12 input-group">
+            <input class="form-control" id="search" name="search" type="text" placeholder='eg. Peterborough'/>
+            </div>
+            <div class="col-12 d-grid gap-2">
+            <button class="btn btn-info btn-lg" id="submit">Search</button>
+            </div>
+        </div>
+        <div id="history">
+        </div>
     </div>
-    <div class="col-8 forecast">
-        <div class="row current">
-            <!--5 DAY FORECAST-->
+    <div class="col-8">
+        <div id="current" class="row current">
+        </div>
+         <!--5 DAY FORECAST-->
+        <div class="row">
             <div class="col-12 h3">
                 5 Day Forecast
             </div>
-        </div>
-        <div class="row fiveDay">
-           
-            <div class="col-2 ">
-                test1
-            </div>
-            <div class="col-2 ">
-                test2
-            </div>
-            <div class="col-2 ">
-                test3
-            </div>
-            <div class="col-2 ">
-                test4
-            </div>
-            <div class="col-2 ">
-                test5
+            <div id="fiveDay" class="col-12 row">
+
             </div>
         </div>
     </div>
@@ -56,6 +55,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
