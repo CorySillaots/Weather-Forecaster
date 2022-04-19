@@ -4,7 +4,7 @@ var apiKey='28e329e5a233f8895f3d779ee68543b9';
 
 //use city name to get lat and lon
 function getLatLong(cityName){
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},CA&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName},CA&appid=${apiKey}`)
     //convert response into json
     .then(response => response.json())
     .then(data => {
@@ -37,7 +37,6 @@ function search(searchTerm, type){
         localStorage.setItem('history', storedHistory);
     }
 }
-    
 function getForecast(cityLocation){
     //hit current forecast endpoint for the city and append to appropriate rows
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityLocation.lat}&lon=${cityLocation.lon}&units=metric&appid=${apiKey}`)
